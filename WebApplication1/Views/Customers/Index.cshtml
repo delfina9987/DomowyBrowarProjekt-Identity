@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplication1.Models.Customers>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body>
+  <header class="masthead mb-auto"></header>
+  <main role="main">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <h4>Zamówienia</h4>
+
+        <p>
+          <a asp-action="Create">Utwórz nowe zamówienie</a>
+        </p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+              </th>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerSurname)
+              </th>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+              </th>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerPhoneNr)
+              </th>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerService)
+              </th>
+              <th>
+                @Html.DisplayNameFor(model => model.CustomerStatus)
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var item in Model) {
+            <tr>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerSurname)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerEmail)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerPhoneNr)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerService)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CustomerStatus)
+              </td>
+
+              <td>
+                <a asp-action="Edit" asp-route-id="@item.CustomerId">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.CustomerId">Szczegóły</a> |
+                <a asp-action="Delete" asp-route-id="@item.CustomerId">Usuń</a>
+              </td>
+
+            </tr>
+            }
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </main>
+</body>
+
+<head> 
+    <link rel="stylesheet" href="~/css/customer.css" asp-append-version="true"/>
+</head>
+<body>
+  <footer class="mastfoot mt-auto"></footer>
+</body>

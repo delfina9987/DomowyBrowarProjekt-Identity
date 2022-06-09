@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [Authorize(Policy = "RequireAdministratorRole")]
+        //[Authorize(Policy = "RequireAdministratorRole")]
         //[Authorize(Roles = "Administrator")]
         public IActionResult Privacy()
         {

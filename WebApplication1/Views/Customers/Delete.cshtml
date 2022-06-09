@@ -1,0 +1,72 @@
+﻿@model WebApplication1.Models.Customers
+
+@{
+    ViewData["Title"] = "Usuń";
+}
+
+<body>
+  <header class="masthead mb-auto"></header>
+  <main role="main">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div>
+          <h4>Usunięcie zamówienia</h4>
+          <hr />
+
+          <dl class="row">
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerName)
+            </dd>
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerSurname)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerSurname)
+            </dd>
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerEmail)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerEmail)
+            </dd>
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerPhoneNr)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerPhoneNr)
+            </dd>
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerService)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerService)
+            </dd>
+            <dt class = "col-sm-2">
+              @Html.DisplayNameFor(model => model.CustomerStatus)
+            </dt>
+            <dd class = "col-sm-10">
+              @Html.DisplayFor(model => model.CustomerStatus)
+            </dd>
+          </dl>
+
+          <form asp-action="Delete">
+            <input type="hidden" asp-for="CustomerId" />
+            <input type="submit" value="Usuń" class="btn btn-danger" /> |
+            <a asp-action="Index">Wróć do listy zamówienia</a>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<head> 
+    <link rel="stylesheet" href="~/css/customer.css" asp-append-version="true"/>
+</head>
+<body>
+  <footer class="mastfoot mt-auto"></footer>
+</body>

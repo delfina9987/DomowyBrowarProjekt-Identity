@@ -1,18 +1,54 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    /*background-color: #282D3C;*/
+    background-image: url("https://www.readersdigest.co.uk/media/_system/images/pages/scale1370/7513_1.jpg?c=1625320847");
+    background-repeat: no-repeat;
+    /*background-size: 2600px 910px;*/
+    background-size: cover;
+}
+
+footer {
+    position: fixed;
+}
+
+.regulations-text {
+    text-align: justify;
+}
+
+.regulations-div {
+    padding: 20px;
+}
+
+.regulations-div2 {
+    margin: 0px;
+}
+
+.bg-about {
+    background-image: url("https://wallpaperaccess.com/full/208107.jpg");
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg-offer {
+    background-image: url("https://wallpaperaccess.com/full/208107.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
 }
