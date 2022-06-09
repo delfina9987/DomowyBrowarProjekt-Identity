@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
 {
     public class AboutController : Controller
     {
+        [AllowAnonymous]
         public IActionResult About()
         {
             return View();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Customers
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> Index()
         {
               return _context.Customers != null ? 
@@ -28,6 +30,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Customers/Details/5
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -46,6 +49,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Customers/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -56,6 +60,7 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("CustomerId,CustomerName,CustomerSurname,CustomerEmail,CustomerPhoneNr,CustomerService,CustomerStatus")] Customers customers)
         {
             if (ModelState.IsValid)
@@ -68,6 +73,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Customers/Edit/5
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -88,6 +94,7 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> Edit(int id, [Bind("CustomerId,CustomerName,CustomerSurname,CustomerEmail,CustomerPhoneNr,CustomerService,CustomerStatus")] Customers customers)
         {
             if (id != customers.CustomerId)
@@ -119,6 +126,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Customers/Delete/5
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -139,6 +147,7 @@ namespace WebApplication1.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Customers == null)
@@ -155,6 +164,7 @@ namespace WebApplication1.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Policy = "RequireAdministratorRole")]
         private bool CustomersExists(int id)
         {
           return (_context.Customers?.Any(e => e.CustomerId == id)).GetValueOrDefault();
