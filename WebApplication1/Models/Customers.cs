@@ -16,10 +16,12 @@ namespace WebApplication1.Models
 
     public enum Service
     {
-        Zestaw_1,
-        Zestaw_2,
-        Zestaw_3,
-        Zestaw_4
+        Grodziskie,
+        Czeski_pilzner,
+        Schwarzbier,
+        Summer_Ale,
+        Koźlak_Tradycyjny,
+        Imperialny_Porter_Bałtycki
     }
 
     public enum Status
