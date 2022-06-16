@@ -4,16 +4,20 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>User Roles</h1>
-<table class="table table-striped">
-    <thead>
+
+<div class="album py-5 back-color">
+    <div class="container back-color">
+
+        <h1>User Roles</h1>
+        <table class="table table-striped">
+        <thead>
         <tr>
             <th>Email</th>
             <th>Roles</th>
             <th>Action</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         @foreach (var user in Model)
         {
         <tr>
@@ -24,5 +28,9 @@
             </td>
         </tr>
         }
-    </tbody>
-</table>
+        </tbody>
+        </table>
+
+    </div>
+</div>
+
