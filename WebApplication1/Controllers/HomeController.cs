@@ -28,6 +28,48 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public IActionResult Regulations()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Authorship()
+        {
+            return View(); 
+        }
+
+        [AllowAnonymous]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Offer()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult ComingSoon()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult ThankYou()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

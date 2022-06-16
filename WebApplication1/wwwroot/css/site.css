@@ -39,3 +39,13 @@ footer {
     margin: 0px;
 }
 
+.text-color-back {
+    display: inline;
+    background-color: palegreen;
+    padding: 2px;
+    margin: 2px;
+}
+
+.back-color {
+    background-color: palegreen;
+}

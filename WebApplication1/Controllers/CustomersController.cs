@@ -67,7 +67,7 @@ namespace WebApplication1.Controllers
             {
                 _context.Add(customers);
                 await _context.SaveChangesAsync();
-                return View("Views/ThankYou/ThankYou.cshtml");
+                return View("Views/Home/ThankYou.cshtml");
             }
             return View(customers);
         }

@@ -2,14 +2,16 @@
     ViewData["Title"] = "Strona główna";
 }
 
-<body class="text-center">
+<body class="text-center text-color">
   <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto"></header>
     <main role="main">
-      <h1>Domowy Browar</h1>
-      <p class="lead">Strona główna in progress...</p>
-      <h1 class="lead"><strong>Zapraszamy do przejrzenia naszej <a asp-area="" asp-controller="Offer" asp-action="Offer">oferty</a> jesienno-zimowej.</strong></h1>
-      <h1 class="lead"><strong>Na Państwa zamówienia czekamy do końca lipca!</strong></h1>
+      <h1 class="text-color-back">Domowy Browar</h1>
+      <h1 class="lead"><span class="text-color-back"><strong>Zapraszamy do przejrzenia naszej <a asp-area="" asp-controller="Home" asp-action="Offer">oferty</a> jesienno-zimowej.</strong></span></h1>
+      <h1 class="lead"><span class="text-color-back"><strong>W razie pytań odsyłamy do naszej zakładki <a asp-area="" asp-controller="Home" asp-action="Contact">kontakt</a>.</strong></span></h1>
+      <h1 class="lead"><span class="text-color-back"><strong>Na Państwa zamówienia czekamy do końca lipca!</strong></span></h1>
+      <h1 class="lead"><span class="text-color-back"><strong>Aby złożyć zamówienie, <a asp-area="" asp-controller="Customers" asp-action="Create">kliknij tutaj</a>!</strong></span></h1>
+      <h1 class="lead"><span class="text-color-back"><strong>Strona została zaprojektowana jako projekt zaliczeniowy. Więcej o informacji oraz o autorach tego projektu znajdziesz <a asp-area="" asp-controller="Home" asp-action="Authorship">tutaj</a>.</strong></span></h1>
     </main>
     <footer class="mastfoot mt-auto"></footer>
   </div>

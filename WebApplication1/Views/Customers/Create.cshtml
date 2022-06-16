@@ -7,8 +7,8 @@
 <body>
    <header class="masthead mb-auto"></header>
    <main role="main">
-      <div class="album py-5 bg-light">
-         <div class="container">
+      <div class="album py-5 back-color">
+         <div class="container back-color">
 
              <h4>Złóż zamówienie i zarezerwuj zestaw!</h4>
              <hr />
@@ -57,7 +57,7 @@
                         <input asp-for="CustomerStatus" type="hidden" class="form-control" id="CustomerStatus" value="Niezaakceptowany"/>
                         <span asp-validation-for="CustomerStatus" class="text-danger"></span>
                      </div>
-                     <p>Wypełniając ten formularz, zgadzasz się na nasz <a asp-area="" asp-controller="Regulations" asp-action="Regulations">Regulamin</a>.</p>
+                     <p>Wypełniając ten formularz, zgadzasz się na nasz <a asp-area="" asp-controller="Home" asp-action="Regulations">Regulamin</a>.</p>
                      <div class="form-group">
                         <input type="submit" value="Zarezerwuj" class="btn btn-primary" />
                      </div>
