@@ -5,9 +5,9 @@
     ViewData["Title"] = "Zaloguj się";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1><strong>@ViewData["Title"]</strong></h1>
 
-<body class="text-light">
+<body class="text-black">
     <main class="form-signin w-100 m-auto">
         
         <div class="row">
@@ -18,12 +18,12 @@
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-floating">
                             <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                            <label asp-for="Input.Email" class="form-label"></label>
+                            <label asp-for="Input.Email" class="form-label"><strong>Email</strong></label>
                             <span asp-validation-for="Input.Email" class="text-danger"></span>
                         </div>
                         <div class="form-floating">
                             <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                            <label asp-for="Input.Password" class="form-label">Hasło</label>
+                            <label asp-for="Input.Password" class="form-label"><strong>Hasło</strong></label>
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
                         </div>
 
