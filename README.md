@@ -4,3 +4,7 @@
 https://github.com/delfina9987/DomowyBrowarProjekt/tree/master
 
 ### Ta wersja została stworzona z dodatkiem Identity, by móc autoryzować użytkowników - stąd druga wersja projektu.
+
+### Projekt został wstawiony na serwer za pomocą Azure, poniżej link:
+
+https://domowybrowar.azurewebsites.net
