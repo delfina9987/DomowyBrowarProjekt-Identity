@@ -8,3 +8,5 @@ https://github.com/delfina9987/DomowyBrowarProjekt/tree/master
 ### Projekt został wstawiony na serwer za pomocą Azure, poniżej link:
 
 https://domowybrowar.azurewebsites.net
+
+### Gałąź lokalna zawiera lokalną wersję projektu.
