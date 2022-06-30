@@ -1,7 +1,5 @@
 ## Projekt na zaliczenie przedmiotu Programowanie zaawansowane WSB
 
-### Projekt został wstawiony na serwer za pomocą Azure, poniżej link:
-
-https://domowybrowar.azurewebsites.net
+### Projekt był widoczny na serwerze za pomocą Azure (https://domowybrowar.azurewebsites.net), aktualnie jest niedostępny. 
 
 ### Gałąź lokalna zawiera lokalną wersję projektu.
